@@ -19,8 +19,14 @@ with open("sub.txt") as file:
         content[line] = content[line].replace('\n', '')
     dict = {content[line]: content[line + 1] for line in range(0, len(content), 2)}
     print(dict)  # 1
-    del content[0:len(content):2]
-    print(content)  # 2
+
+del content[0:len(content):2]
+for line in range(len(content)):
+    new_sub += content[line]
+with open("sub.txt", 'w') as file:
+    file.writelines(new_sub)
+print(new_sub) # 2 
+    
 
     
 
