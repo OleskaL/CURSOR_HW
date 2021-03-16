@@ -13,6 +13,7 @@ import openpyxl as openpyxl
 
 
 dict = {}
+new_sub = ''
 with open("sub.txt") as file:
     content = file.readlines()
     for line in range(len(content)):
